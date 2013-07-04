@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>on :${1:click}${2:, '${3:selector}'} do |${1:/:'"/}|
+end
+</string>
+	<key>name</key>
+	<string>Vienna: View &gt; on(:event)</string>
+	<key>scope</key>
+	<string>source.ruby.opal</string>
+	<key>tabTrigger</key>
+	<string>on</string>
+	<key>uuid</key>
+	<string>CFE4819A-08D4-491C-A3AE-AD221933404F</string>
+</dict>
+</plist>
