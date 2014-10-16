@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+function pre {
+	echo -n '&lt;pre style="word-wrap: break-word;"&gt;'
+	perl -pe '$| = 1; s/&amp;/&amp;amp;/g; s/&lt;/&amp;lt;/g; s/&gt;/&amp;gt;/g; s/$\\n/&lt;br&gt;/'
+	echo '&lt;/pre&gt;'
+}
+cd "$TM_PROJECT_DIRECTORY"
+
+echo "($(${TM_RUBY:=ruby} -v))" | pre
+# ruby_source="$(cat)"
+# print_command="${TM_RUBY:=ruby} -S ${TM_OPAL:=opal} --compile -e '$ruby_source' 2&gt;&amp;1"
+# echo $print_command | pre
+# echo $ruby_source | pre
+${TM_RUBY:=ruby} -S ${TM_OPAL:=opal} -v - 2&gt;&amp;1 | pre
+
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.ruby.opal</string>
+	<key>uuid</key>
+	<string>2D25E7D2-CF8B-4BFC-AA0A-F558D1EF7B22</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
