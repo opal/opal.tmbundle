@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>function (…) {…</string>
 	<key>scope</key>
-	<string>source.ruby.opal</string>
+	<string>string.interpolated.ruby</string>
 	<key>tabTrigger</key>
 	<string>f</string>
 	<key>uuid</key>
