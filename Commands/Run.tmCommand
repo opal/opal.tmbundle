@@ -17,10 +17,10 @@ cd "$TM_PROJECT_DIRECTORY"
 
 echo "($(${TM_RUBY:=ruby} -v))" | pre
 # ruby_source="$(cat)"
-# print_command="${TM_RUBY:=ruby} -S ${TM_OPAL:=opal} --compile -e '$ruby_source' 2&gt;&amp;1"
-# echo $print_command | pre
+print_command="${TM_RUBY:=ruby} -S ${TM_OPAL:=opal} -v - 2&gt;&amp;1"
+echo $print_command | pre
+$print_command | pre
 # echo $ruby_source | pre
-${TM_RUBY:=ruby} -S ${TM_OPAL:=opal} -v - 2&gt;&amp;1 | pre
 
 </string>
 	<key>input</key>
