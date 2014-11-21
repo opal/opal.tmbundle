@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Opal: Embedded JS Style</string>
+	<key>scope</key>
+	<string>source.js.embedded.ruby</string>
+	<key>settings</key>
+	<dict>
+		<key>background</key>
+		<string>#FFA73B25</string>
+		<key>fontStyle</key>
+		<string>italic</string>
+	</dict>
+	<key>uuid</key>
+	<string>6DC47BE4-E203-4CB4-A857-28B1139960CB</string>
+</dict>
+</plist>
