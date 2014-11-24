@@ -1,4 +1,4 @@
-# opal-ruby.tmbundle
+# opal.tmbundle
 
 TextMate bundle for Opal Ruby
 
