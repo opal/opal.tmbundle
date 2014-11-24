@@ -33,6 +33,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#interpolated_ruby_js</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#nest_curly_js</string>
 				</dict>
 				<dict>
@@ -48,6 +52,32 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>interpolated_ruby_js</key>
+		<dict>
+			<key>begin</key>
+			<string>#\{</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.ruby</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#nest_curly_js</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.ruby</string>
+				</dict>
+			</array>
+		</dict>
 		<key>nest_curly_js</key>
 		<dict>
 			<key>begin</key>
@@ -64,6 +94,10 @@
 			<string>\}</string>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#interpolated_ruby_js</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#nest_curly_js</string>
